@@ -17,28 +17,28 @@ const RegistrationForm: FC = () => {
         <form>
             <h3>Register</h3>
             <label htmlFor="email">Enter email:</label>
-                <input 
-                type="text" 
-                name="email" 
-                id="email" 
-                placeholder="Email" 
-                value={formData.email} 
+                <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email"
+                value={formData.email}
                 onChange={handleChange} />
             <label htmlFor="firstName">Enter first name:</label>
-                <input 
-                type="text" 
-                name="firstName" 
-                id="firstName" 
-                placeholder="First Name" 
-                value={formData.firstName} 
+                <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
                 onChange={handleChange} />
             <label htmlFor="lastName">Enter email:</label>
-                <input 
-                type="text" 
-                name="lastname" 
-                id="lastName" 
-                placeholder="Last Name" 
-                value={formData.lastName} 
+                <input
+                type="text"
+                name="lastname"
+                id="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
                 onChange={handleChange} />
             <button>Create user!</button>
         </form>
