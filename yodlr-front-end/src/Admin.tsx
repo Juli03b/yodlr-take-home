@@ -23,24 +23,24 @@ const Admin: FC = () => {
                         return (
                             <Card>
                                 <CardContent>
-                                    <Typography 
-                                        variant="h5" 
+                                    <Typography
+                                        variant="h5"
                                         gutterBottom
                                     >
-                                            {firstName} {lastName} 
-                                        <Typography 
+                                            {firstName} {lastName}
+                                        <Typography
                                             variant="caption"
-                                        > 
+                                        >
                                             ID:{id}
                                         </Typography>
                                     </Typography>
-                                    <Typography 
-                                        variant="caption" 
+                                    <Typography
+                                        variant="caption"
                                         gutterBottom
                                     >
                                         {email}
                                     </Typography>
-                                    <Typography 
+                                    <Typography
                                         variant="caption"
                                         style={{
                                             color: state === "active" ? "green" : "red",
