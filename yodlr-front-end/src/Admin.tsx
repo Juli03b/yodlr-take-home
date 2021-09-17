@@ -30,7 +30,7 @@ const Admin: FC = () => {
                                             {firstName} {lastName} 
                                         <Typography 
                                             variant="caption"
-                                        > 
+                                        >
                                             ID:{id}
                                         </Typography>
                                     </Typography>
