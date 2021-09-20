@@ -1,11 +1,22 @@
-label{
+.label{
     display: block;
-    font-size: 5rem;
+    font-size: 2.5rem !important;
+    margin-top: 2rem !important;
 }
-input{
-    width: 15rem;
+.input{
+    margin-top: 2rem;
+    width: 21rem;
     height: 4rem;
     font-size: 3rem;
     border-radius: 25rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    margin: auto;
+    display: table;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+button{
+    width: 21rem;
 }

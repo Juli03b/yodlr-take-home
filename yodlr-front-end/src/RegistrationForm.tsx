@@ -1,5 +1,7 @@
+import { Button, TextField, Typography } from "@material-ui/core";
 import { ChangeEvent, FC, useState } from "react";
 import "./RegistrationForm.css"
+import yodlrApi from "./yodlrApi";
 
 const RegistrationForm: FC = () => {
     const FORM_INITIAL_STATE = {
@@ -10,37 +12,46 @@ const RegistrationForm: FC = () => {
     const [formData, setFormData] = useState(FORM_INITIAL_STATE);
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target;
-        console.log(name, value)
         setFormData((formData) => ({...formData, [name]: value}));
     }
+    const submitForm = () => {
+        console.log("SUBMITT")
+        yodlrApi.register(formData)
+    }
     return (
-        <form>
+        <form onSubmit={submitForm}>
             <h3>Register</h3>
-            <label htmlFor="email">Enter email:</label>
-                <input
+            <Typography variant="h3" gutterBottom component="label" htmlFor="email" className="label">Enter email:</Typography>
+                <TextField
                 type="text"
                 name="email"
                 id="email"
                 placeholder="Email"
                 value={formData.email}
-                onChange={handleChange} />
-            <label htmlFor="firstName">Enter first name:</label>
-                <input
+                onChange={handleChange}
+                variant="outlined"
+                className="input" />
+            <Typography variant="h3" gutterBottom component="label" htmlFor="firstName" className="label">Enter first name:</Typography>
+                <TextField
                 type="text"
                 name="firstName"
                 id="firstName"
-                placeholder="First Name"
+                placeholder="First name"
                 value={formData.firstName}
-                onChange={handleChange} />
-            <label htmlFor="lastName">Enter email:</label>
-                <input
+                onChange={handleChange}
+                variant="outlined"
+                className="input" />
+            <Typography variant="h3" gutterBottom component="label" htmlFor="lastName" className="label">Enter last name:</Typography>
+                <TextField
                 type="text"
-                name="lastname"
+                name="lastName"
                 id="lastName"
-                placeholder="Last Name"
+                placeholder="Last name"
                 value={formData.lastName}
-                onChange={handleChange} />
-            <button>Create user!</button>
+                onChange={handleChange}
+                variant="outlined"
+                className="input" />
+            <Button style={{display:"block", margin:"auto", top:"2rem", fontSize:"1em"}} variant="outlined" type="submit">Create user!</Button>
         </form>
     );
 };
